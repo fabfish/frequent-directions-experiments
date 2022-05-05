@@ -1,6 +1,6 @@
 import unittest
-from ..sketch.utils.syntheticDataMaker import SyntheticDataMaker
-from ..sketch.bruteForce import BruteForce as Sketcher
+from .src.utils.syntheticDataMaker import SyntheticDataMaker
+from .src.bruteForce import BruteForce as Sketcher
 
 class testBruteForce(unittest.TestCase):
 
@@ -14,7 +14,7 @@ class testBruteForce(unittest.TestCase):
     
     sketcher = Sketcher(d,ell)
 
-    for i in xrange(n):
+    for i in range(n):
         v = syntheticDataMaker.makeRow()
         sketcher.append(v)
     sketch = sketcher.get()

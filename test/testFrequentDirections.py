@@ -1,6 +1,6 @@
 import unittest
-from ..sketch.utils.syntheticDataMaker import SyntheticDataMaker
-from ..sketch.frequentDirections import FrequentDirections as Sketcher
+from ..python.utils.syntheticDataMaker import SyntheticDataMaker
+from ..python.frequentDirections import FrequentDirections as Sketcher
 
 class testFrequentDirections(unittest.TestCase):
 
@@ -14,7 +14,7 @@ class testFrequentDirections(unittest.TestCase):
    
     sketcher = Sketcher(d,ell)
 
-    for i in xrange(n):
+    for i in range(n):
         v = syntheticDataMaker.makeRow()
         sketcher.append(v)
     sketch = sketcher.get()
