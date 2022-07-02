@@ -20,7 +20,7 @@ class FrequentDirections(MatrixSketcherBase):
         if count_nonzero(vector) == 0:
             return
 
-    	if self.nextZeroRow >= self.m:
+        if self.nextZeroRow >= self.m:
             self.__rotate__()
 
         self._sketch[self.nextZeroRow,:] = vector 
